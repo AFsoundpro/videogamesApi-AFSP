@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const routes = require('./routes/index');
+const router = require('./routes/index');
 
 require('./db');
 
@@ -27,7 +27,10 @@ server.use((req, res, next) => {
 
 // rutas
 
- 
+server.use('/videogames', router);
+server.use('/videogames/:idVideogame', router);
+server.use('/videogames/name?="..."', router);
+server.use('/genres', router);
 
 //manejo de errores en solicitudes
 

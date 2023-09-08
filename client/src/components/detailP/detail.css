@@ -1,0 +1,10 @@
+/* GameDetail.module.css */
+.game-detail {
+    text-align: center;
+  }
+  
+  .game-detail img {
+    max-width: 100%;
+    height: auto;
+  }
+  

@@ -1,0 +1,7 @@
+/* GameList.module.css */
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  

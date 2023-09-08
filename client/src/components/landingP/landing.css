@@ -1,0 +1,29 @@
+/* LandingPage.module.css */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: silver;
+  }
+  
+.landing-page h1 {
+  /* border: solid px green; */
+  color: rgb(172, 128, 212);
+}
+
+.landing-page main img {
+  width: 350px; /* Modifica el valor según el tamaño deseado */
+  height: auto; /* Esto mantiene la relación de aspecto original */
+}
+
+/* En tu archivo de estilos (por ejemplo, landing.css) */
+.landing-page button {
+  font-size: 25px; /* Cambia el tamaño del botón ajustando el valor */
+}
+
+
+  /* Agrega estilos adicionales según sea necesario */
+  
