@@ -1,10 +1,63 @@
-/* GameDetail.module.css */
-.game-detail {
-    text-align: center;
-  }
+/* GameDetail.css */
+
+.card-container {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #f0f0f0; /* Cambia el color de fondo */
+  width: 780px;
+}
+
+.card {
   
-  .game-detail img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  max-width: auto;
+  padding: 30px; /* Agrega un relleno interno */
+  background-color: transparent;
+  font-family: 'whitesmoke', sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Cambia la animación en hover */
+}
+
+.game-detail img {
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 1cm;
+}
+
+.game-info {
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.game-detail h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.game-detail p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Nuevos estilos para los campos adicionales */
+.game-detail p:nth-child(odd) {
+  font-weight: bold;
+}
+
+.game-detail p:nth-child(even) {
+  font-style: italic;
+}
+

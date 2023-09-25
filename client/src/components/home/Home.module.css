@@ -1,0 +1,18 @@
+/* Home.module.css */
+
+.homePage {
+    /* Estilos para la página principal */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .contentWrapper {
+    /* Contenedor para organizar contenido */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Agrega estilos adicionales según tus necesidades */
+  

@@ -1,7 +1,7 @@
 import React from 'react';
 import './filters.css';
 
-function Filters({ onFilterChange }) {
+function Filters({ onFilterChange, onSearch }) {
   const handleGenreChange = (e) => {
     const selectedGenre = e.target.value;
     onFilterChange({ genre: selectedGenre });
@@ -12,8 +12,18 @@ function Filters({ onFilterChange }) {
     onFilterChange({ source: selectedSource });
   };
 
+  const handleSearch = () => {
+    const searchQuery = document.getElementById('search-input').value;
+    onSearch(searchQuery);
+  };
+
   return (
     <div className="filters">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar videojuegos..."
+      />
       <label htmlFor="genre-filter">Filtrar por Género:</label>
       <select id="genre-filter" onChange={handleGenreChange}>
         <option value="">Todos los géneros</option>
@@ -28,6 +38,10 @@ function Filters({ onFilterChange }) {
         <option value="API">API</option>
         <option value="Base de datos">Base de datos</option>
       </select>
+
+      <button type="button" onClick={handleSearch}>
+        Buscar
+      </button>
     </div>
   );
 }

@@ -3,22 +3,24 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const router = require('./routes/index');
+require('dotenv').config();
 
 require('./db');
 
 
 const server = express();
 
-server.name = 'API';
+// server.name = 'API';
 
 //Seccion de middlewares:
 
 server.use(bodyParser.urlencoded({extended: true, limit: '50mb'})); //analiza la url entrante.
 server.use(bodyParser.json({limit: '50mb'}));
 server.use(cookieParser());
+server.use(express.json());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3001'); // update to match the domain you will make the request from
+    res.header('Access-Control-Allow-Origin', 'http://localhost:5173'); // update to match the domain you will make the request from
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -27,10 +29,14 @@ server.use((req, res, next) => {
 
 // rutas
 
-server.use('/videogames', router);
-server.use('/videogames/:idVideogame', router);
-server.use('/videogames/name?="..."', router);
-server.use('/genres', router);
+server.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+server.get('/videogames', router);
+server.get('/videogames/:idVideogame', router);
+server.get('/videogames/:name', router);
+server.get('/genres', router);
 
 //manejo de errores en solicitudes
 

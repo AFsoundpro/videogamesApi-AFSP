@@ -1,7 +1,48 @@
-/* Filters.module.css */
+/* filters.css */
+
 .filters {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos en una fila */
+  align-items: center;
+  border: solid 3px darkgray;
+}
+
+input[type="text"] {
+  flex-grow: 1; /* El input ocupará todo el espacio restante */
+  padding: 10px;
+  margin-right: 10px; /* Espacio entre el input y el botón */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #009688;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+select {
+  flex-grow: 1; /* Los selectores ocuparán todo el espacio restante */
+  padding: 10px;
+  margin-left: 10px; /* Espacio entre los selectores */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: auto; /* Elimina la limitación de ancho anterior */
+}

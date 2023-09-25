@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header/header';
+import Navbar from '../Nav/nav';
 import GameList from '../gameList/gameList';
 import Filters from '../filters/filters';
 import './Home.module.css'; // Estilos para la página principal
@@ -7,9 +7,16 @@ import './Home.module.css'; // Estilos para la página principal
 function HomePage({ games }) {
   return (
     <div className="home-page">
-      <Header />
+      <Navbar />
+      <br />
+      <hr />
+      <br />
       <Filters />
+      <br />
+      <hr />
       <GameList />
+      <br />
+      <hr />
     </div>
   );
 }

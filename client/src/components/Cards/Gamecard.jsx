@@ -2,15 +2,29 @@ import React from 'react';
 import './GameCard.css';
 import { Link } from 'react-router-dom';
 
-function GameCard({ game }) {
+function GameCard({videogames}) {
   return (
     <div className="game-card">
-      <img src='#' alt='#' />
-      <Link to="/detailPage">
-        <h2>Nombre de juego</h2>
-      </Link>
-      <p>Genres:</p>
-      {/* Agrega un enlace a la página de detalle del juego */}
+      {videogames.map((game) => (
+        <div key={game.id}>
+          <img src={game.image} alt={game.name} />
+          <hr />
+          <h3>{game.name}</h3>
+          <h4>Rating:</h4>
+          <p>{game.rating}</p>
+          {/* <div>
+            <strong>Género(s):</strong>
+            <ul>
+              {game.genre.map((genre, index) => (
+                <li key={index}>{genre.name}</li>
+              ))}
+            </ul>
+          </div> */}
+          <hr />
+          <Link to={`/home/${game.id}`}>Ver detalles</Link>
+          <hr />
+        </div>
+      ))}
     </div>
   );
 }

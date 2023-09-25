@@ -24,15 +24,15 @@ a:hover {
 }
 
 body {
-  background-image: url('/img/pexels-lucie-liz-3165335.jpg');
+  background-color: darkcyan;
   background-size: cover;
   background-repeat: no-repeat;
     width: auto;
     height: auto;
     background-position: center;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     justify-content: center;
     align-items: center;
     text-align: center;

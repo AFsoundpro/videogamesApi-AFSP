@@ -1,14 +1,73 @@
-/* GameCard.module.css */
+/* GameCard.css */
+
 .game-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .game-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  background-color: transparent;
+  border: 3px solid #ccc;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden; /* Oculta el contenido que desborda */
+  border-radius: 5%;
+}
+
+/* Agrega estas reglas para mostrar las tarjetas en una fila horizontal */
+/* .card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.game-card img {
+  max-width: 100%;
+  min-height: 125px;
+  max-height: 125px;
+  width: auto; /* Añade esta regla para que la imagen se ajuste al ancho máximo */
+  height: auto; /* Añade esta regla para que la imagen se ajuste al alto máximo */
+  border-radius: 5%;
+}
+
+.game-card h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  white-space: nowrap; /* Evita el ajuste de línea para el título */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para texto que desborda */
+}
+
+.game-card p {
+  font-size: 14px;
+  color: silver;
+  white-space: nowrap; /* Evita el ajuste de línea para el texto */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para texto que desborda */
+}
+
+.game-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-card li {
+  margin: 3px 0;
+}
+
+.game-card a {
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.game-card a:hover {
+  background-color: #0056b3;
+}
